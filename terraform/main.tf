@@ -25,3 +25,59 @@ module "sandbox" {
 
   account_customizations_name = "sandbox"
 }
+
+module "sandbox" {
+  source = "./modules/aft-account-request"
+
+  control_tower_parameters = {
+    AccountEmail              = "afttools@biasedvariance.com"
+    AccountName               = "aft-tools"
+    ManagedOrganizationalUnit = "AFT Management"
+    SSOUserEmail              = "awssso@biasedvariance.com"
+    SSOUserFirstName          = "Tools"
+    SSOUserLastName           = "AFT"
+  }
+
+  account_tags = {
+    "Learn Tutorial" = "AFT"
+  }
+
+  change_management_parameters = {
+    change_requested_by = "HashiCorp Learn"
+    change_reason       = "Learn AWS Control Tower Account Factory for Terraform"
+  }
+
+  custom_fields = {
+    group = "dev"
+  }
+
+  account_customizations_name = "dev"
+}
+
+module "sandbox" {
+  source = "./modules/aft-account-request"
+
+  control_tower_parameters = {
+    AccountEmail              = "aftdatalakebronze@biasedvariance.com"
+    AccountName               = "aft-data-lake-bronze"
+    ManagedOrganizationalUnit = "AFT Management"
+    SSOUserEmail              = "awssso@biasedvariance.com"
+    SSOUserFirstName          = "DataLakeBronze"
+    SSOUserLastName           = "AFT"
+  }
+
+  account_tags = {
+    "Learn Tutorial" = "AFT"
+  }
+
+  change_management_parameters = {
+    change_requested_by = "HashiCorp Learn"
+    change_reason       = "Learn AWS Control Tower Account Factory for Terraform"
+  }
+
+  custom_fields = {
+    group = "dev"
+  }
+
+  account_customizations_name = "dev"
+}

@@ -26,7 +26,7 @@ module "sandbox" {
   account_customizations_name = "sandbox"
 }
 
-module "sandbox" {
+module "tools" {
   source = "./modules/aft-account-request"
 
   control_tower_parameters = {
@@ -54,7 +54,7 @@ module "sandbox" {
   account_customizations_name = "dev"
 }
 
-module "sandbox" {
+module "dlbronze" {
   source = "./modules/aft-account-request"
 
   control_tower_parameters = {

@@ -115,7 +115,7 @@ module "pranaecomm" {
 
   control_tower_parameters = {
     AccountEmail              = "aftpranaecomm@biasedvariance.com"
-    AccountName               = "aft-prana-ecomm"
+    AccountName               = "aft-prana-ecommerce"
     ManagedOrganizationalUnit = "AFT Management"
     SSOUserEmail              = "awssso@biasedvariance.com"
     SSOUserFirstName          = "PranaEcomm"

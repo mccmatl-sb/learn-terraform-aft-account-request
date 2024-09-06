@@ -110,12 +110,12 @@ module "pranadomain" {
   account_customizations_name = "prod"
 }
 
-module "pranaecomm" {
+module "pranaecommbeta" {
   source = "./modules/aft-account-request"
 
   control_tower_parameters = {
-    AccountEmail              = "aftpranaecomm@biasedvariance.com"
-    AccountName               = "aft-prana-ecommerce"
+    AccountEmail              = "aft_prana_ecomm@biasedvariance.com"
+    AccountName               = "aft-prana-ecommerce_beta"
     ManagedOrganizationalUnit = "AFT Management"
     SSOUserEmail              = "awssso@biasedvariance.com"
     SSOUserFirstName          = "PranaEcomm"
@@ -127,8 +127,8 @@ module "pranaecomm" {
   }
 
   change_management_parameters = {
-    change_requested_by = "Matt Humbert"
-    change_reason       = "Testing pipeline again after adding SNS subscription notifications"
+    change_requested_by = "HashiCorp Learn"
+    change_reason       = "Learn AWS Control Tower Account Factory for Terraform"
   }
 
   custom_fields = {

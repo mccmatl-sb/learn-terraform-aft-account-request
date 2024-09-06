@@ -128,7 +128,7 @@ module "pranaecomm" {
 
   change_management_parameters = {
     change_requested_by = "Matt Humbert"
-    change_reason       = "Testing pipeline again after CodeStar Connection replaced"
+    change_reason       = "Testing pipeline again after adding SNS subscription notifications"
   }
 
   custom_fields = {

@@ -109,3 +109,31 @@ module "pranadomain" {
 
   account_customizations_name = "prod"
 }
+
+module "pranaecomm" {
+  source = "./modules/aft-account-request"
+
+  control_tower_parameters = {
+    AccountEmail              = "aftpranaecomm@biasedvariance.com"
+    AccountName               = "aft-prana-ecomm"
+    ManagedOrganizationalUnit = "AFT Management"
+    SSOUserEmail              = "awssso@biasedvariance.com"
+    SSOUserFirstName          = "PranaEcomm"
+    SSOUserLastName           = "AFT"
+  }
+
+  account_tags = {
+    "Learn Tutorial" = "AFT"
+  }
+
+  change_management_parameters = {
+    change_requested_by = "HashiCorp Learn"
+    change_reason       = "Learn AWS Control Tower Account Factory for Terraform"
+  }
+
+  custom_fields = {
+    group = "dev"
+  }
+
+  account_customizations_name = "dev"
+}

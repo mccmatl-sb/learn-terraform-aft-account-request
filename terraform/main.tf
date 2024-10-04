@@ -110,15 +110,15 @@ module "pranadomain" {
   account_customizations_name = "prod"
 }
 
-module "pranapresta" {
+module "presta_dev" {
   source = "./modules/aft-account-request"
 
   control_tower_parameters = {
-    AccountEmail              = "aft_prana_ecomm@biasedvariance.com"
-    AccountName               = "aft-prana-presta"
+    AccountEmail              = "aft_presta_dev@biasedvariance.com"
+    AccountName               = "aft-presta-dev"
     ManagedOrganizationalUnit = "AFT Management"
     SSOUserEmail              = "awssso@biasedvariance.com"
-    SSOUserFirstName          = "PranaPresta"
+    SSOUserFirstName          = "PrestaDev"
     SSOUserLastName           = "AFT"
   }
 

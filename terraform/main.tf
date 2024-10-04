@@ -128,7 +128,7 @@ module "presta_dev" {
 
   change_management_parameters = {
     change_requested_by = "HashiCorp Learn"
-    change_reason       = "Learn AWS Control Tower Account Factory for Terraform"
+    change_reason       = "Learn AWS Control Tower Account Factory for Terraform - foo"
   }
 
   custom_fields = {

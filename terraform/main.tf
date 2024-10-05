@@ -110,15 +110,15 @@ module "pranadomain" {
   account_customizations_name = "prod"
 }
 
-module "presta_dev" {
+module "presta_dev_2" {
   source = "./modules/aft-account-request"
 
   control_tower_parameters = {
-    AccountEmail              = "aft_presta_dev@biasedvariance.com"
-    AccountName               = "aft-presta-dev"
+    AccountEmail              = "aft_presta_dev2@biasedvariance.com"
+    AccountName               = "aft-presta-dev-2"
     ManagedOrganizationalUnit = "AFT Management"
     SSOUserEmail              = "awssso@biasedvariance.com"
-    SSOUserFirstName          = "PrestaDev"
+    SSOUserFirstName          = "PrestaDev2"
     SSOUserLastName           = "AFT"
   }
 
@@ -128,7 +128,7 @@ module "presta_dev" {
 
   change_management_parameters = {
     change_requested_by = "HashiCorp Learn"
-    change_reason       = "Learn AWS Control Tower Account Factory for Terraform - foo"
+    change_reason       = "Learn AWS Control Tower Account Factory for Terraform"
   }
 
   custom_fields = {
